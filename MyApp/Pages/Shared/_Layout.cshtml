@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/rtl/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/css/bootstrap-rtl.css" rel="stylesheet" />
+
     @RenderSection("styles", required: false)
 </head>
-<body dir="rtl">
+<body class="rtl">
     <div class="container" style="padding-top:20px">
         @RenderBody()
     </div>
