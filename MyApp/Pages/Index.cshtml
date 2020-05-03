@@ -1,0 +1,34 @@
+﻿@page
+@model MyApp.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+@section styles{
+    <link href="~/lib/select2/css/select2.css" rel="stylesheet" />
+}
+
+<h1>MyApp</h1>
+<hr />
+
+<select class="select-city form-control w-50 rtl" name="state" dir="rtl">
+    <option value="1">تهران</option>
+    <option value="2">اصفهان</option>
+    <option value="3">شیراز</option>
+    <option value="4">مشهد</option>
+    <option value="5">تبریز</option>
+</select>
+
+@section scripts{
+    <script src="~/lib/select2/js/select2.js"></script>
+    <script src="~/lib/select2/js/i18n/fa.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.select-city').select2({
+                language: "fa",
+                dir: "rtl"
+            });
+        });
+    </script>
+}
+
